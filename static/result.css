@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/lof.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(221, 245, 244, 0.92);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #6cc5d4;
+    backdrop-filter: blur(10px);
+    border: 2px solid #6cc5d4;
+    max-width: 750px;
+    text-align: center;
+    margin-right: 700px;
+}
+.glass-card{
+    width: 600px;
+    height: 200px;
+}
+
+.glass-card h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.safe {
+    color: #4CAF50;
+    text-shadow: 0 0 10px #4CAF50;
+}
+
+.danger {
+    color: #d9534f;
+    text-shadow: 0 0 10px #d9534f;
+}
+
+.glass-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Button */
+.glow-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #b97ebd;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 10px #c47fb0;
+    transition: 0.3s;
+}
+
+.glow-btn:hover {
+    background: #8673a1;
+    box-shadow: 0 0 25px #c47fb0, 0 0 50px #b97ebd;
+}
+
+/* Doctor Image */
+.doctor-img img {
+    max-width: 300px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

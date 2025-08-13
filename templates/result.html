@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            {% if prediction == 1 %}
+                <h1 class="danger">⚠ You may have Diabetes</h1>
+                <p>Please consult a doctor for a full check-up and guidance.</p>
+            {% else %}
+                <h1 class="safe">✅ You are Healthy</h1>
+                <p>No signs of diabetes detected. Keep up a healthy lifestyle!</p>
+            {% endif %}
+            <a href="/" class="glow-btn">🔄 Predict Again</a>
+        </div>
+    </div>
+</body>
+</html>

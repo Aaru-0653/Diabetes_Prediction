@@ -1,0 +1,86 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/lof.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container & Card use new purple-pink palette */
+.container {
+   margin-left: 0px;
+   margin-right: 900px;
+   width: 500px;
+}
+
+.glass-card {
+    background: rgba(221, 245, 244, 0.92); /* lightest pink from palette */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #6cc5d4; /* mid pink shadow */
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #6cc5d4; /* mid purple-pink border */
+}
+
+.glass-card label {
+    color: #b97ebd; /* purple */
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.glass-card input {
+    padding: 10px;
+    border: 1px solid #c47fb0;
+    border-radius: 8px;
+    margin-top: 5px;
+    background: white; /* lightest pink */
+    color: #333;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.glass-card input:focus {
+    border: 1.5px solid #b97ebd;
+    background-color: #c4b0c5;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #8673a1; /* darkest purple */
+    text-shadow: 0 0 15px #b97ebd;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.glow-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background: #b97ebd; /* purple */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #c47fb0;
+}
+
+.glow-btn:hover {
+    background: #8673a1;
+    box-shadow: 0 0 25px #c47fb0, 0 0 50px #b97ebd;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .glass-card {
+        width: 90%;
+    }
+}
