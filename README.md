@@ -39,7 +39,7 @@ A cute yet powerful Machine Learning project that predicts whether you are at ri
 
 ### 1️⃣ Clone this repository
 ```bash
-git clone https://github.com/yourusername/diabetes-prediction.git
+git clone https://github.com/Aaru-0653/diabetes-prediction.git
 cd diabetes-prediction
 
 
@@ -75,9 +75,9 @@ scikit-learn
 
 Pandas & NumPy
 
-HTML / CSS
 
-<div align="center">
-Made with 💖 by Aaru
-</div> ```
+
+
+                                                                                 Made with 💖 by Aaru
+
 
