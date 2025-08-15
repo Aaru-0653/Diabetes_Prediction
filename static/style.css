@@ -107,27 +107,3 @@ body {
         width: 90%;
     }
 }
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start; /* left align */
-    align-items: center; /* vertically center */
-    background: url("/static/one.jpg") no-repeat center center/cover;
-}
-
-.container {
-    max-width: 500px;
-    margin-left: 250px; /* thoda gap from left */
-}
-
-.glass-card {
-    background: rgba(221, 245, 244, 0.92);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #6cc5d4;
-    backdrop-filter: blur(10px);
-    border: 2px solid #6cc5d4;
-}
