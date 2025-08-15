@@ -1,15 +1,12 @@
-/* Background */
-body {
+* { box-sizing: border-box; }
+html, body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-    /* background-image: url("/static/one.jpg") no-repeat center center/cover; */
-    /* background: url("{{ url_for('static', filename='one.jpg') }}") no-repeat center center/cover;
-    background-size: cover; */
-
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100%;
+    /* background-color: #f7f9fb; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .bg-overlay {
@@ -18,51 +15,61 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/static/one.jpg") no-repeat center center/cover;
-    z-index: -1; 
-    margin-top: 50px;
+    background: url("/static/one.jpg") no-repeat center center;
+    background-size: cover;
+    /* filter: saturate(1.05) brightness(0.9); */
+    z-index: -1;
 }
 
-
-
-/* Form Container & Card use new purple-pink palette */
 .container {
-    margin-left: 0px;
-    margin-right: 900px;
+    width: 95%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 12px;
+    display: inline-block;
+}
+
+.container{
     width: 500px;
+    margin-left: 150px;
 }
 
 .glass-card {
     background: rgba(221, 245, 244, 0.92);
-    /* lightest pink from palette */
-    padding: 20px;
+    padding: 22px;
     border-radius: 15px;
-    box-shadow: 0 0 20px #6cc5d4;
-    /* mid pink shadow */
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(108,197,212,0.15);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(108,197,212,0.6);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    align-items: start;
+}
+
+
+.field {
     display: flex;
     flex-direction: column;
-    border: 2px solid #6cc5d4;
-    /* mid purple-pink border */
 }
+
 
 .glass-card label {
     color: #b97ebd;
-    /* purple */
-    margin-top: 10px;
+    margin-bottom: 6px;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .glass-card input {
     padding: 10px;
     border: 1px solid #c47fb0;
     border-radius: 8px;
-    margin-top: 5px;
-    background: white;
-    /* lightest pink */
+    background: #fff;
     color: #333;
     outline: none;
-    transition: border 0.2s;
+    transition: border 0.18s, background-color 0.18s;
+    width: 100%;
 }
 
 .glass-card input:focus {
@@ -70,17 +77,26 @@ body {
     background-color: #c4b0c5;
 }
 
-/* Title */
+
+/* Title spans full width */
 .title {
+    grid-column: 1 / -1;
     text-align: center;
     font-size: 2.2rem;
     color: #8673a1;
-    /* darkest purple */
     text-shadow: 0 0 15px #b97ebd;
-    margin-bottom: 20px;
+    margin: 0 0 8px 0;
 }
 
-/* Button */
+/* Actions (button) spans full width of the card */
+.actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+
 .glow-btn {
     margin-top: 20px;
     padding: 12px;
@@ -93,6 +109,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 0 10px #c47fb0;
+    width: 300px;
 }
 
 .glow-btn:hover {
@@ -101,9 +118,29 @@ body {
     color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
+/* Make button full width on small screens */
+@media (max-width: 640px) {
     .glass-card {
-        width: 90%;
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 10px;
     }
+    .title { font-size: 1.6rem; margin-bottom: 12px; }
+    .glow-btn { width: 100%; min-width: 0; }
 }
+
+/* Tweak large screens */
+@media (min-width: 1100px) {
+    .container { margin-top: 30px; }
+    .glass-card { padding: 28px; gap: 14px; }
+}
+
+/* Ensure inputs and fields scale nicely */
+.glass-card input, .glow-btn { box-sizing: border-box; }
+
+
+
+
+
+
+
