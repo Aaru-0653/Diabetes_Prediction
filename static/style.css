@@ -2,16 +2,13 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    /* background-image: url("/static/one.jpg") no-repeat center center/cover; */
-    /* background: url("{{ url_for('static', filename='one.jpg') }}") no-repeat center center/cover;
-    background-size: cover; */
-
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Background Overlay */
 .bg-overlay {
     position: fixed;
     top: 0;
@@ -19,36 +16,33 @@ body {
     width: 100%;
     height: 100%;
     background: url("/static/one.jpg") no-repeat center center/cover;
-    z-index: -1; 
-    margin-top: 50px;
+    z-index: -1;
 }
 
-
-
-/* Form Container & Card use new purple-pink palette */
+/* Main container for form + image */
 .container {
-    margin-left: 0px;
-    margin-right: 900px;
-    width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* space between form & image */
+    padding: 20px;
 }
 
+/* Glass form card */
 .glass-card {
     background: rgba(221, 245, 244, 0.92);
-    /* lightest pink from palette */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px #6cc5d4;
-    /* mid pink shadow */
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     border: 2px solid #6cc5d4;
-    /* mid purple-pink border */
+    width: 550px;
+    margin-right: 550px;
 }
 
 .glass-card label {
     color: #b97ebd;
-    /* purple */
     margin-top: 10px;
     font-weight: 500;
 }
@@ -59,7 +53,6 @@ body {
     border-radius: 8px;
     margin-top: 5px;
     background: white;
-    /* lightest pink */
     color: #333;
     outline: none;
     transition: border 0.2s;
@@ -75,7 +68,6 @@ body {
     text-align: center;
     font-size: 2.2rem;
     color: #8673a1;
-    /* darkest purple */
     text-shadow: 0 0 15px #b97ebd;
     margin-bottom: 20px;
 }
@@ -85,7 +77,6 @@ body {
     margin-top: 20px;
     padding: 12px;
     background: #b97ebd;
-    /* purple */
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -101,9 +92,33 @@ body {
     color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
     .glass-card {
         width: 90%;
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Space between form & image */
+    padding: 20px;
+}
+
+/* Image styling */
+.image-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 }

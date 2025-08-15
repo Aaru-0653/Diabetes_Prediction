@@ -10,8 +10,10 @@
     <div class="bg-overlay"></div>
 
     <div class="container">
-        <h1 class="title">🔮 Diabetes Prediction</h1>
+        <!-- Left: Form -->
         <form action="/predict" method="POST" class="glass-card">
+            <h1 class="title">🔮 Diabetes Prediction</h1>
+
             <label>Pregnancies</label>
             <input type="number" name="Pregnancies" required>
 
@@ -38,6 +40,11 @@
 
             <button type="submit" class="glow-btn">Predict</button>
         </form>
-    </div>
+
+        <!-- Right: Image
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='one.png') }}" alt="Doctor" />
+        </div>
+    </div> -->
 </body>
 </html>
